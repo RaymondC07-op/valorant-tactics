@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
 import { getMapWithContent, getComposition, getAllMapSlugs } from "@/lib/content";
 import MapSidebar from "@/components/map/MapSidebar";
 import CompositionTable from "@/components/composition/CompositionTable";
 import MapPoolBadge from "@/components/map/MapPoolBadge";
-import TacticAccordion from "@/components/map/TacticAccordion";
 import CalloutImage from "@/components/map/CalloutImage";
 import { DIFFICULTY_COLORS } from "@/lib/constants";
+
+const TacticAccordion = dynamic(
+  () => import("@/components/map/TacticAccordion"),
+  { loading: () => <TacticAccordionSkeleton /> }
+);
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -31,6 +36,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "zh_CN",
     },
   };
+}
+
+function TacticAccordionSkeleton() {
+  return (
+    <div className="space-y-4 animate-pulse">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="bg-valorant-dark/40 border border-gray-700/20 rounded-sm p-5">
+          <div className="h-5 bg-gray-700/30 rounded-sm w-1/3 mb-4" />
+          <div className="h-3 bg-gray-700/20 rounded-sm w-full mb-2" />
+          <div className="h-3 bg-gray-700/20 rounded-sm w-4/5" />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default async function MapDetailPage({ params }: Props) {
