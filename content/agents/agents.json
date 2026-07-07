@@ -8,7 +8,7 @@
     "releaseDate": "2020-04-07",
     "origin": "韩国",
     "abilities": ["逐风", "烟云", "顺风", "剑刃风暴"],
-    "icon": "/images/agents/jett.png"
+    "icon": "/images/agents/jett.webp"
   },
   {
     "slug": "phoenix",
@@ -19,7 +19,7 @@
     "releaseDate": "2020-04-07",
     "origin": "英国",
     "abilities": ["火焰弹", "闪光曲球", "火焰墙", "再火一次"],
-    "icon": "/images/agents/phoenix.png"
+    "icon": "/images/agents/phoenix.webp"
   },
   {
     "slug": "raze",
@@ -30,7 +30,7 @@
     "releaseDate": "2020-04-07",
     "origin": "巴西",
     "abilities": ["爆破机器人", "炸药包", "爆破榴弹", "天降火雨"],
-    "icon": "/images/agents/raze.png"
+    "icon": "/images/agents/raze.webp"
   },
   {
     "slug": "reyna",
@@ -41,7 +41,7 @@
     "releaseDate": "2020-06-02",
     "origin": "墨西哥",
     "abilities": ["噬魂", "吞噬", "蔑视", "女皇旨令"],
-    "icon": "/images/agents/reyna.png"
+    "icon": "/images/agents/reyna.webp"
   },
   {
     "slug": "yoru",
@@ -52,7 +52,7 @@
     "releaseDate": "2021-01-12",
     "origin": "日本",
     "abilities": ["佯攻", "闪点", "时空穿梭", "维度漂移"],
-    "icon": "/images/agents/yoru.png"
+    "icon": "/images/agents/yoru.webp"
   },
   {
     "slug": "neon",
@@ -63,7 +63,7 @@
     "releaseDate": "2022-01-11",
     "origin": "菲律宾",
     "abilities": ["闪电冲击", "滑行", "震荡弹", "超限闪电"],
-    "icon": "/images/agents/neon.png"
+    "icon": "/images/agents/neon.webp"
   },
   {
     "slug": "iso",
@@ -74,7 +74,7 @@
     "releaseDate": "2023-10-31",
     "origin": "中国",
     "abilities": ["淘汰对决", "护盾", "双重打击", "歼灭模式"],
-    "icon": "/images/agents/iso.png"
+    "icon": "/images/agents/iso.webp"
   },
   {
     "slug": "sova",
@@ -85,7 +85,7 @@
     "releaseDate": "2020-04-07",
     "origin": "俄罗斯",
     "abilities": ["侦察箭", "电击箭", "猎鹰无人机", "猎人之怒"],
-    "icon": "/images/agents/sova.png"
+    "icon": "/images/agents/sova.webp"
   },
   {
     "slug": "breach",
@@ -96,7 +96,7 @@
     "releaseDate": "2020-04-07",
     "origin": "瑞典",
     "abilities": ["余震", "闪光弹", "爆破", "地动山摇"],
-    "icon": "/images/agents/breach.png"
+    "icon": "/images/agents/breach.webp"
   },
   {
     "slug": "skye",
@@ -107,7 +107,7 @@
     "releaseDate": "2020-10-27",
     "origin": "澳大利亚",
     "abilities": ["先驱者", "闪光鸟", "治疗", "追迹者"],
-    "icon": "/images/agents/skye.png"
+    "icon": "/images/agents/skye.webp"
   },
   {
     "slug": "kayo",
@@ -118,7 +118,7 @@
     "releaseDate": "2021-06-22",
     "origin": "未知（机器人）",
     "abilities": ["闪光弹", "破片", "零/点", "无效指令"],
-    "icon": "/images/agents/kayo.png"
+    "icon": "/images/agents/kayo.webp"
   },
   {
     "slug": "fade",
@@ -129,7 +129,7 @@
     "releaseDate": "2022-04-27",
     "origin": "土耳其",
     "abilities": ["暗影之眼", "暗影之爪", "幽魂", "夜幕降临"],
-    "icon": "/images/agents/fade.png"
+    "icon": "/images/agents/fade.webp"
   },
   {
     "slug": "gekko",
@@ -140,7 +140,7 @@
     "releaseDate": "2023-03-07",
     "origin": "美国",
     "abilities": ["皮蛋", "飞鲨", "丢丢", "终极进化"],
-    "icon": "/images/agents/gekko.png"
+    "icon": "/images/agents/gekko.webp"
   },
   {
     "slug": "brimstone",
@@ -151,7 +151,7 @@
     "releaseDate": "2020-04-07",
     "origin": "美国",
     "abilities": ["燃烧弹", "烟雾弹", "振奋信标", "轨道打击"],
-    "icon": "/images/agents/brimstone.png"
+    "icon": "/images/agents/brimstone.webp"
   },
   {
     "slug": "viper",
@@ -162,7 +162,7 @@
     "releaseDate": "2020-04-07",
     "origin": "美国",
     "abilities": ["毒蛇之咬", "毒雾", "毒墙", "蝰蛇深坑"],
-    "icon": "/images/agents/viper.png"
+    "icon": "/images/agents/viper.webp"
   },
   {
     "slug": "omen",
@@ -173,7 +173,7 @@
     "releaseDate": "2020-04-07",
     "origin": "未知",
     "abilities": ["暗影步", "暗黑领域", "偏执", "暗影降临"],
-    "icon": "/images/agents/omen.png"
+    "icon": "/images/agents/omen.webp"
   },
   {
     "slug": "astra",
@@ -184,7 +184,7 @@
     "releaseDate": "2021-03-02",
     "origin": "加纳",
     "abilities": ["星云", "新星脉冲", "重力井", "宇宙裂隙"],
-    "icon": "/images/agents/astra.png"
+    "icon": "/images/agents/astra.webp"
   },
   {
     "slug": "harbor",
@@ -195,7 +195,7 @@
     "releaseDate": "2022-10-18",
     "origin": "印度",
     "abilities": ["潮汐", "海湾", "瀑布", "海啸"],
-    "icon": "/images/agents/harbor.png"
+    "icon": "/images/agents/harbor.webp"
   },
   {
     "slug": "clove",
@@ -206,7 +206,7 @@
     "releaseDate": "2024-03-26",
     "origin": "苏格兰",
     "abilities": ["干扰", "生命", "绽放", "不朽"],
-    "icon": "/images/agents/clove.png"
+    "icon": "/images/agents/clove.webp"
   },
   {
     "slug": "sage",
@@ -217,7 +217,7 @@
     "releaseDate": "2020-04-07",
     "origin": "中国",
     "abilities": ["冰墙", "缓速法球", "治愈法球", "复活"],
-    "icon": "/images/agents/sage.png"
+    "icon": "/images/agents/sage.webp"
   },
   {
     "slug": "cypher",
@@ -228,7 +228,7 @@
     "releaseDate": "2020-04-07",
     "origin": "摩洛哥",
     "abilities": ["绊索", "摄像头", "电子牢笼", "神经窃取"],
-    "icon": "/images/agents/cypher.png"
+    "icon": "/images/agents/cypher.webp"
   },
   {
     "slug": "killjoy",
@@ -239,7 +239,7 @@
     "releaseDate": "2020-08-04",
     "origin": "德国",
     "abilities": ["纳米蜂群", "炮塔", "警报机器人", "锁定"],
-    "icon": "/images/agents/killjoy.png"
+    "icon": "/images/agents/killjoy.webp"
   },
   {
     "slug": "chamber",
@@ -250,7 +250,7 @@
     "releaseDate": "2021-11-16",
     "origin": "法国",
     "abilities": ["猎头手枪", "传送锚点", "法国盛宴", "自我裁决"],
-    "icon": "/images/agents/chamber.png"
+    "icon": "/images/agents/chamber.webp"
   },
   {
     "slug": "deadlock",
@@ -261,7 +261,7 @@
     "releaseDate": "2023-06-27",
     "origin": "挪威",
     "abilities": ["声波传感器", "屏障网", "重力网", "歼灭"],
-    "icon": "/images/agents/deadlock.png"
+    "icon": "/images/agents/deadlock.webp"
   },
   {
     "slug": "vyse",
@@ -272,7 +272,7 @@
     "releaseDate": "2024-08-28",
     "origin": "未知",
     "abilities": ["弧光玫瑰", "电击藤蔓", "钢铁花园", "棘刺之墙"],
-    "icon": "/images/agents/vyse.png"
+    "icon": "/images/agents/vyse.webp"
   },
   {
     "slug": "cashew",
@@ -283,7 +283,7 @@
     "releaseDate": "2025-01-15",
     "origin": "未知",
     "abilities": ["特快专递", "精准投放", "潜袭爬虫", "末日审判"],
-    "icon": "/images/agents/cashew.png"
+    "icon": "/images/agents/cashew.webp"
   },
   {
     "slug": "iris",
@@ -294,7 +294,7 @@
     "releaseDate": "2025-06-15",
     "origin": "未知",
     "abilities": ["共振谐律", "声波帷幕", "电音脉冲", "音脉强袭"],
-    "icon": "/images/agents/iris.png"
+    "icon": "/images/agents/iris.webp"
   },
   {
     "slug": "pine",
@@ -305,7 +305,7 @@
     "releaseDate": "2025-09-15",
     "origin": "未知",
     "abilities": ["裂变残片", "噬源体", "涡流折跃", "完全进化"],
-    "icon": "/images/agents/pine.png"
+    "icon": "/images/agents/pine.webp"
   },
   {
     "slug": "terra",
@@ -316,6 +316,6 @@
     "releaseDate": "2026-03-15",
     "origin": "未知",
     "abilities": ["光速飞跃", "溯流回光", "光棱闪爆", "时光修罗场"],
-    "icon": "/images/agents/terra.png"
+    "icon": "/images/agents/terra.webp"
   }
 ]

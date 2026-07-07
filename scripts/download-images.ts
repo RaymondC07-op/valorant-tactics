@@ -55,11 +55,11 @@ async function downloadAgents() {
   for (const agent of json.data) {
     if (!agent.displayIcon) continue;
     const slug = (agent.developerName || agent.displayName).toLowerCase().replace(/[\s\/]/g, "-");
-    const dest = path.join(AGENTS_DIR, `${slug}.png`);
+    const dest = path.join(AGENTS_DIR, `${slug}.webp`);
 
     // Skip if already exists
     if (fs.existsSync(dest)) {
-      console.log(`  [HAS] ${slug}.png`);
+      console.log(`  [HAS] ${slug}.webp`);
       count++;
       continue;
     }
@@ -90,10 +90,10 @@ async function downloadMaps() {
     const imageUrl = map.splash || map.listViewIcon || map.displayIcon;
     if (!imageUrl) continue;
 
-    const dest = path.join(MAPS_DIR, `${slug}.png`);
+    const dest = path.join(MAPS_DIR, `${slug}.webp`);
 
     if (fs.existsSync(dest)) {
-      console.log(`  [HAS] ${slug}.png`);
+      console.log(`  [HAS] ${slug}.webp`);
       count++;
       continue;
     }
