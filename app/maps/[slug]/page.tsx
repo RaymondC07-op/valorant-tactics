@@ -6,6 +6,7 @@ import CompositionTable from "@/components/composition/CompositionTable";
 import MapPoolBadge from "@/components/map/MapPoolBadge";
 import { DIFFICULTY_COLORS } from "@/lib/constants";
 import MapContentRenderer from "./MapContentRenderer";
+import CalloutImage from "@/components/map/CalloutImage";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -21,8 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!map) return { title: "地图未找到" };
 
   return {
-    title: `${map.name}攻略 - ${map.nameEn}战术详解 - 无畏契约战术手册`,
+    title: `${map.name}攻略 - ${map.nameEn}战术详解`,
     description: `${map.name}(${map.nameEn})详细攻防战术攻略：包含报点点位、进攻路线、防守站位、推荐阵容。${map.playstyle}`,
+    openGraph: {
+      title: `${map.name}攻略 - ${map.nameEn}战术详解 - 无畏契约战术手册`,
+      description: `${map.name}(${map.nameEn})详细攻防战术攻略：包含报点点位、进攻路线、防守站位、推荐阵容。${map.playstyle}`,
+      type: "article",
+      locale: "zh_CN",
+    },
   };
 }
 
@@ -89,6 +96,16 @@ export default async function MapDetailPage({ params }: Props) {
 
           {/* Main Content */}
           <article className="flex-1 min-w-0">
+            {/* Callout Image */}
+            {mapData.calloutImage && (
+              <div className="mb-8">
+                <CalloutImage
+                  src={mapData.calloutImage}
+                  alt={`${mapData.name}报点图`}
+                />
+              </div>
+            )}
+
             <MapContentRenderer content={mapData.content} />
 
             {/* Composition Section */}

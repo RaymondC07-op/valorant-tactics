@@ -62,7 +62,7 @@ export default function MapSidebar() {
           <li key={h.id}>
             <button
               onClick={() => scrollTo(h.id)}
-              className={`text-left text-sm w-full py-1.5 transition-colors rounded px-2 ${
+              className={`text-left text-sm w-full py-2.5 transition-colors rounded px-2 ${
                 h.level === 3 ? "pl-5" : "pl-2"
               } ${
                 activeId === h.id

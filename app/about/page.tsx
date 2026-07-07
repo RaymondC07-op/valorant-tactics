@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import { getAllMaps, getAllAgents } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "关于本站 - 无畏契约战术手册",
+  title: "关于本站",
   description: "关于无畏契约战术手册网站的介绍、免责声明和更新方式。",
+  openGraph: {
+    title: "关于本站 - 无畏契约战术手册",
+    description: "关于无畏契约战术手册网站的介绍、免责声明和更新方式。",
+    type: "website",
+    locale: "zh_CN",
+  },
 };
 
 export default function AboutPage() {

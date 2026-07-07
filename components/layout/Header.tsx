@@ -33,6 +33,7 @@ export default function Header() {
                       ? "bg-valorant-red/10 text-valorant-red"
                       : "text-gray-400 hover:text-valorant-light hover:bg-white/5"
                   }`}
+                  aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}
                 </Link>
@@ -43,8 +44,9 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-gray-400 hover:text-valorant-light"
+            className="md:hidden p-3 text-gray-400 hover:text-valorant-light"
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileOpen ? (
@@ -58,7 +60,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <nav className="md:hidden pb-4 border-t border-valorant-red/10 pt-2">
+          <nav className="md:hidden pb-4 border-t border-valorant-red/10 pt-2" aria-label="主导航">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
@@ -71,6 +73,7 @@ export default function Header() {
                       ? "bg-valorant-red/10 text-valorant-red"
                       : "text-gray-400 hover:text-valorant-light hover:bg-white/5"
                   }`}
+                  aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}
                 </Link>

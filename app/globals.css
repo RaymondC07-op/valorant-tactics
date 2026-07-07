@@ -25,5 +25,29 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, Helvetica, sans-serif;
+}
+
+/* Global focus-visible outline for keyboard accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-valorant-red);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--color-valorant-red);
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 8px;
 }

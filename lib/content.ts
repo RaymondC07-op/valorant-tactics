@@ -36,14 +36,36 @@ function parseFrontmatter(raw: string): {
   const yamlBlock = match[1];
   const body = match[2];
 
-  // Simple YAML parser for flat key: value pairs
+  // Simple YAML parser for flat key: value pairs and list items
   const frontmatter: Record<string, unknown> = {};
   const lines = yamlBlock.split("\n");
+  let currentKey = "";
   for (const line of lines) {
+    // YAML list item:   - "value" or - 'value' or - value
+    const listMatch = line.match(/^\s*-\s+["']?(.+?)["']?\s*$/);
+    if (listMatch) {
+      if (currentKey) {
+        const existing = frontmatter[currentKey];
+        if (Array.isArray(existing)) {
+          existing.push(listMatch[1]);
+        } else {
+          frontmatter[currentKey] = [listMatch[1]];
+        }
+      }
+      continue;
+    }
+
     const colonIdx = line.indexOf(":");
     if (colonIdx === -1) continue;
     const key = line.slice(0, colonIdx).trim();
+    currentKey = key;
     let rawValue = line.slice(colonIdx + 1).trim();
+
+    // Skip if value is empty (list items follow on next lines)
+    if (rawValue === "") {
+      frontmatter[key] = [];
+      continue;
+    }
 
     // Remove quotes
     if (

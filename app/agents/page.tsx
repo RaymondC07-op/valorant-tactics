@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { getAllAgents } from "@/lib/content";
-import type { Agent, Role } from "@/lib/types";
-import { ROLE_NAMES } from "@/lib/constants";
-import RoleBadge from "@/components/shared/RoleBadge";
+import type { Agent } from "@/lib/types";
 import AgentGridClient from "./AgentGridClient";
 
 export const metadata: Metadata = {
-  title: "特工图鉴 - 无畏契约战术手册",
+  title: "特工图鉴",
   description: "浏览全部无畏契约特工信息：决斗者、先锋、控场者、哨卫，含技能和定位说明。",
+  openGraph: {
+    title: "特工图鉴 - 无畏契约战术手册",
+    description: "浏览全部无畏契约特工信息：决斗者、先锋、控场者、哨卫，含技能和定位说明。",
+    type: "website",
+    locale: "zh_CN",
+  },
 };
 
 export default function AgentsPage() {

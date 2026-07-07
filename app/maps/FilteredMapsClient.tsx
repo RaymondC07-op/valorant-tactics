@@ -39,12 +39,12 @@ export default function FilteredMapsClient({ maps }: Props) {
   return (
     <>
       <div className="flex justify-center mb-8">
-        <div className="inline-flex bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-1 gap-1">
+        <div className="inline-flex flex-wrap bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-1 gap-1">
           {filters.map((f) => (
             <button
               key={f.key}
               onClick={() => setFilter(f.key)}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`px-4 py-2.5 rounded-md text-sm font-medium transition-colors ${
                 filter === f.key
                   ? "bg-valorant-red text-white shadow-sm"
                   : "text-gray-400 hover:text-valorant-light"

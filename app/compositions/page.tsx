@@ -7,8 +7,14 @@ import MapPoolBadge from "@/components/map/MapPoolBadge";
 import { DIFFICULTY_COLORS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "阵容推荐 - 无畏契约战术手册",
+  title: "阵容推荐",
   description: "浏览全部无畏契约地图的进攻防守最佳阵容推荐，含战术理由与获胜条件。",
+  openGraph: {
+    title: "阵容推荐 - 无畏契约战术手册",
+    description: "浏览全部无畏契约地图的进攻防守最佳阵容推荐，含战术理由与获胜条件。",
+    type: "website",
+    locale: "zh_CN",
+  },
 };
 
 export default function CompositionsPage() {

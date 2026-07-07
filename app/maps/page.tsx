@@ -3,8 +3,14 @@ import { getAllMaps } from "@/lib/content";
 import FilteredMapsClient from "./FilteredMapsClient";
 
 export const metadata: Metadata = {
-  title: "地图攻略 - 无畏契约战术手册",
+  title: "地图攻略",
   description: "浏览全部无畏契约地图的攻防战术攻略，包括亚海悬城、隐世修所、源工重镇等13张地图。",
+  openGraph: {
+    title: "地图攻略 - 无畏契约战术手册",
+    description: "浏览全部无畏契约地图的攻防战术攻略，包括亚海悬城、隐世修所、源工重镇等13张地图。",
+    type: "website",
+    locale: "zh_CN",
+  },
 };
 
 export default function MapsPage() {

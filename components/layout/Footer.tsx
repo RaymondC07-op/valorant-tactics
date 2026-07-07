@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-valorant-dark/50 mt-6 pt-6 text-center text-gray-600 text-xs">
+        <div className="border-t border-valorant-dark/50 mt-6 pt-6 text-center text-gray-500 text-xs">
           &copy; {new Date().getFullYear()} {SITE_NAME} — 由社区爱好者维护，内容基于 VCT 职业比赛与社区攻略整理
         </div>
       </div>

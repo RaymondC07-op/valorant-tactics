@@ -25,7 +25,7 @@ export default function AgentGridClient({ initialAgents }: Props) {
       <div className="flex flex-wrap justify-center gap-2 mb-10">
         <button
           onClick={() => setSelectedRole("all")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
             selectedRole === "all"
               ? "bg-valorant-red text-white"
               : "bg-valorant-dark/40 border border-gray-700/30 text-gray-400 hover:text-valorant-light"
@@ -40,7 +40,7 @@ export default function AgentGridClient({ initialAgents }: Props) {
             <button
               key={role}
               onClick={() => setSelectedRole(role)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
+              className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors border ${
                 isActive
                   ? "border-current text-white"
                   : "border-gray-700/30 text-gray-400 hover:text-valorant-light"
@@ -60,16 +60,28 @@ export default function AgentGridClient({ initialAgents }: Props) {
             key={agent.slug}
             className="group bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-4 hover:border-valorant-red/30 hover:shadow-lg hover:shadow-valorant-red/5 transition-all text-center"
           >
-            {/* Agent Icon Placeholder */}
-            <div
-              className="w-16 h-16 mx-auto rounded-full border-2 flex items-center justify-center text-2xl font-bold mb-3"
-              style={{
-                borderColor: `${ROLE_ICON_COLORS[agent.role]}60`,
-                backgroundColor: `${ROLE_ICON_COLORS[agent.role]}15`,
-                color: ROLE_ICON_COLORS[agent.role],
-              }}
-            >
-              {agent.name[0]}
+            {/* Agent Icon */}
+            <div className="w-16 h-16 mx-auto rounded-full border-2 flex items-center justify-center text-2xl font-bold mb-3 overflow-hidden"
+              style={{ borderColor: `${ROLE_ICON_COLORS[agent.role]}60` }}>
+              <img
+                src={agent.icon}
+                alt={agent.name}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  // Fallback to initial on image load failure
+                  const el = e.currentTarget;
+                  el.style.display = "none";
+                  const parent = el.parentElement;
+                  if (parent) {
+                    parent.style.backgroundColor = `${ROLE_ICON_COLORS[agent.role]}15`;
+                    parent.textContent = agent.name[0];
+                    parent.style.color = ROLE_ICON_COLORS[agent.role];
+                    parent.style.fontSize = "";
+                    parent.style.fontWeight = "bold";
+                  }
+                }}
+              />
             </div>
 
             <h3 className="text-valorant-light font-semibold text-sm">{agent.name}</h3>
@@ -79,7 +91,7 @@ export default function AgentGridClient({ initialAgents }: Props) {
               <RoleBadge role={agent.role} roleZh={agent.roleZh} />
             </div>
 
-            <p className="text-gray-600 text-xs mb-2">{agent.origin}</p>
+            <p className="text-gray-400 text-xs mb-2">{agent.origin}</p>
 
             {/* Abilities */}
             <div className="flex flex-wrap justify-center gap-1">

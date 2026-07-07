@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "无畏契约战术手册 - Valorant Tactics",
+    default: "无畏契约战术手册 - 专业地图攻略与阵容推荐",
     template: "%s - 无畏契约战术手册",
   },
   description: "掌握所有无畏契约地图的攻防战术与最佳阵容搭配。专业阵容推荐、报点点位、进攻防守策略。",
@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     description: "掌握所有无畏契约地图的攻防战术与最佳阵容搭配",
     type: "website",
     locale: "zh_CN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "无畏契约战术手册",
+    description: "掌握所有无畏契约地图的攻防战术与最佳阵容搭配",
   },
 };
 
@@ -41,8 +46,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-valorant-dark text-valorant-light">
+        <a href="#main-content" className="skip-to-content">
+          跳转到主要内容
+        </a>
         <Header />
-        <div className="flex-1">{children}</div>
+        <div className="flex-1" id="main-content">{children}</div>
         <Footer />
       </body>
     </html>

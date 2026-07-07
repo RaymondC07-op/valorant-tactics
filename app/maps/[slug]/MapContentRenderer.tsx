@@ -2,15 +2,26 @@
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import type { Components } from "react-markdown";
 
 interface Props {
   content: string;
 }
 
-export default function MapContentRenderer({ content }: Props) {
-  // Remove frontmatter if present
-  const bodyContent = content.replace(/^---[\s\S]*?---\n?/, "");
+const components: Components = {
+  img: ({ src, alt, ...props }) => (
+    <img
+      src={src}
+      alt={alt || "报点图"}
+      className="rounded-xl border border-gray-700/30 my-6 w-full max-w-3xl"
+      loading="lazy"
+      {...props}
+    />
+  ),
+};
 
+export default function MapContentRenderer({ content }: Props) {
   return (
     <div className="prose prose-invert prose-lg max-w-none
       prose-headings:text-valorant-light
@@ -28,8 +39,12 @@ export default function MapContentRenderer({ content }: Props) {
       prose-td:border prose-td:border-gray-600/50 prose-td:px-4 prose-td:py-2 prose-td:text-gray-300
       prose-img:rounded-xl prose-img:border prose-img:border-gray-700/30
     ">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {bodyContent}
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+        components={components}
+      >
+        {content}
       </ReactMarkdown>
     </div>
   );
