@@ -1,0 +1,8 @@
+# Cloudflare Pages 配置 — 无畏契约战术手册
+# 部署命令: npm run build && npx wrangler pages deploy out/
+
+name = "valorant-tactics"
+pages_build_output_dir = "out"
+compatibility_date = "2026-07-08"
+
+# 纯静态站点，无 Functions

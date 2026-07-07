@@ -1,0 +1,12 @@
+{
+  "name": "valorant-tactics",
+  "build": {
+    "command": "npm run build",
+    "output_directory": "out",
+    "root_directory": ""
+  },
+  "framework": "nextjs",
+  "routes": [
+    { "pattern": "/*", "resolve": "/$1" }
+  ]
+}
