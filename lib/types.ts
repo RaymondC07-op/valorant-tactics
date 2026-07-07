@@ -69,13 +69,8 @@ export interface TacticChapter {
 export interface MapComposition {
   mapSlug: MapSlug;
   updatedAt: string;
-  attack: {
-    recommended: CompositionEntry[];
-    alternativeAgents: AgentSlug[];
-  };
-  defense: {
-    recommended: CompositionEntry[];
-  };
+  recommended: CompositionEntry[];
+  alternativeAgents: AgentSlug[];
 }
 
 // ---- 导航 ----

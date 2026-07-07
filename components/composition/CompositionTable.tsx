@@ -11,19 +11,14 @@ interface CompositionTableProps {
 
 function CompCard({
   entry,
-  side,
 }: {
-  entry: MapComposition["attack"]["recommended"][number];
-  side: "attack" | "defense";
+  entry: MapComposition["recommended"][number];
 }) {
   const [expanded, setExpanded] = useState(false);
-  const sideColor = side === "attack" ? "border-l-valorant-red" : "border-l-valorant-blue";
-  const accentColor = side === "attack" ? "text-valorant-red" : "text-valorant-blue";
-  const bgAccent = side === "attack" ? "bg-valorant-red/5" : "bg-valorant-blue/5";
 
   return (
     <div
-      className={`corner-brackets bg-valorant-dark/40 border border-gray-700/20 rounded-sm overflow-hidden transition-all duration-300 border-l-2 ${sideColor}`}
+      className="corner-brackets bg-valorant-dark/40 border border-gray-700/20 rounded-sm overflow-hidden transition-all duration-300 border-l-2 border-l-valorant-red"
     >
       {/* Clickable header */}
       <button
@@ -54,7 +49,7 @@ function CompCard({
         <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">{entry.rationale}</p>
 
         {!expanded && (
-          <p className={`text-xs mt-2 ${accentColor} font-medium`}>
+          <p className="text-xs mt-2 text-valorant-red font-medium">
             点击展开详细战术 →
           </p>
         )}
@@ -68,7 +63,7 @@ function CompCard({
       >
         <div className="px-4 pb-4 border-t border-gray-700/10 space-y-4">
           {/* Win condition */}
-          <div className={`rounded-sm px-3 py-2 border border-valorant-gold/20 ${bgAccent}`}>
+          <div className="rounded-sm px-3 py-2 border border-valorant-gold/20 bg-valorant-red/5">
             <span className="text-valorant-gold text-xs font-semibold uppercase tracking-wider">
               获胜条件：
             </span>
@@ -122,47 +117,22 @@ export default function CompositionTable({ composition }: CompositionTableProps)
         <span className="text-xs text-gray-600">点击阵容查看详细战术</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Attack Column */}
-        <div>
-          <h3 className="text-lg font-bold text-valorant-red mb-4 flex items-center gap-2">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <polygon points="12,2 22,20 2,20" />
-              <line x1="12" y1="10" x2="12" y2="16" />
-            </svg>
-            进攻阵容
-          </h3>
-          <div className="space-y-4">
-            {composition.attack.recommended.map((comp, i) => (
-              <CompCard key={i} entry={comp} side="attack" />
-            ))}
-          </div>
-          {composition.attack.alternativeAgents.length > 0 && (
-            <div className="mt-4 flex items-center gap-2 text-sm text-gray-500">
-              <span>备选特工：</span>
-              {composition.attack.alternativeAgents.map((slug) => (
-                <AgentPill key={slug} slug={slug} />
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Defense Column */}
-        <div>
-          <h3 className="text-lg font-bold text-valorant-blue mb-4 flex items-center gap-2">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="3" y="6" width="18" height="12" rx="2" />
-              <line x1="12" y1="6" x2="12" y2="18" />
-            </svg>
-            防守阵容
-          </h3>
-          <div className="space-y-4">
-            {composition.defense.recommended.map((comp, i) => (
-              <CompCard key={i} entry={comp} side="defense" />
-            ))}
-          </div>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {composition.recommended.map((comp, i) => (
+          <CompCard key={i} entry={comp} />
+        ))}
       </div>
+
+      {composition.alternativeAgents.length > 0 && (
+        <div className="mt-6 flex items-center gap-2 text-sm text-gray-500">
+          <span className="shrink-0">备选特工：</span>
+          <div className="flex flex-wrap gap-1.5">
+            {composition.alternativeAgents.map((slug) => (
+              <AgentPill key={slug} slug={slug} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

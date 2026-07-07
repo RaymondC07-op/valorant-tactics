@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { getMapsInRotation } from "@/lib/content";
 
 export default function HeroSection() {
+  const rotationCount = getMapsInRotation().length;
   return (
     <section className="relative overflow-hidden bg-valorant-dark py-24 sm:py-32">
       {/* Tactical grid overlay */}
@@ -80,7 +82,7 @@ export default function HeroSection() {
             {[
               { value: "13", label: "地图攻略" },
               { value: "29", label: "特工图鉴" },
-              { value: "7", label: "轮换地图" },
+              { value: String(rotationCount), label: "轮换地图" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl sm:text-3xl font-black text-valorant-light tabular-nums">
