@@ -3,7 +3,8 @@ import { SITE_NAME, NAV_ITEMS } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-valorant-dark/80 border-t border-valorant-red/10 mt-auto">
+    <footer className="bg-valorant-dark/80 border-t border-valorant-red/10 mt-auto relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-valorant-red/20 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}

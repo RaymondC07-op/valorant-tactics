@@ -11,7 +11,7 @@ export default function MapCard({ map }: MapCardProps) {
   return (
     <Link
       href={`/maps/${map.slug}`}
-      className="group block bg-valorant-dark/40 border border-gray-700/30 rounded-xl overflow-hidden hover:border-valorant-red/50 hover:shadow-lg hover:shadow-valorant-red/5 transition-all duration-300"
+      className="corner-brackets group block bg-valorant-dark/40 border border-gray-700/20 rounded-sm overflow-hidden hover:border-valorant-red/40 transition-all duration-300"
     >
       {/* Map Image */}
       <div className="aspect-video bg-gradient-to-br from-valorant-dark/80 to-valorant-dark relative overflow-hidden">

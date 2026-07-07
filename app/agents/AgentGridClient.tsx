@@ -58,7 +58,7 @@ export default function AgentGridClient({ initialAgents }: Props) {
         {filtered.map((agent) => (
           <div
             key={agent.slug}
-            className="group bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-4 hover:border-valorant-red/30 hover:shadow-lg hover:shadow-valorant-red/5 transition-all text-center"
+            className="corner-brackets group bg-valorant-dark/40 border border-gray-700/20 rounded-sm p-4 hover:border-valorant-red/30 transition-all duration-300 text-center"
           >
             {/* Agent Icon */}
             <div className="w-16 h-16 mx-auto rounded-full border-2 flex items-center justify-center text-2xl font-bold mb-3 overflow-hidden"

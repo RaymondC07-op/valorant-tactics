@@ -54,9 +54,12 @@ export default function MapSidebar() {
 
   return (
     <nav className="sticky top-20">
-      <h4 className="text-sm font-semibold text-valorant-light uppercase tracking-wider mb-3">
-        内容目录
-      </h4>
+      <div className="flex items-center gap-2 mb-4">
+        <span className="w-4 h-px bg-valorant-red/40" />
+        <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-[0.15em]">
+          内容目录
+        </h4>
+      </div>
       <ul className="space-y-1">
         {headings.map((h) => (
           <li key={h.id}>

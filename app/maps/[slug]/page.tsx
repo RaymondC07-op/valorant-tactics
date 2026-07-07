@@ -44,12 +44,12 @@ export default async function MapDetailPage({ params }: Props) {
     <main className="py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-valorant-dark/80 to-valorant-dark border border-gray-700/30 p-6 sm:p-8 mb-8">
+        <div className="relative overflow-hidden rounded-sm bg-gradient-to-br from-valorant-dark/80 to-valorant-dark border border-gray-700/20 p-6 sm:p-8 mb-8">
           <div className="absolute top-0 right-0 w-64 h-64 bg-valorant-red/5 rounded-full blur-3xl" />
           <div className="relative z-10">
             <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
               <div>
-                <h1 className="text-3xl sm:text-4xl font-bold text-valorant-light">
+                <h1 className="text-3xl sm:text-4xl font-extrabold text-valorant-light">
                   {mapData.name}
                 </h1>
                 <p className="text-gray-400 text-lg mt-1">{mapData.nameEn}</p>
@@ -75,10 +75,10 @@ export default async function MapDetailPage({ params }: Props) {
               <span>更新于 {mapData.updatedAt}</span>
             </div>
 
-            {mapData.features.length > 0 && (
+            {mapData.features && Array.isArray(mapData.features) && mapData.features.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-4">
                 {mapData.features.map((f, i) => (
-                  <span key={i} className="text-xs bg-valorant-dark/60 text-gray-300 border border-gray-600/30 rounded-full px-3 py-1">
+                  <span key={i} className="text-xs bg-valorant-dark/60 text-gray-300 border border-gray-600/20 rounded-sm px-3 py-1">
                     {f}
                   </span>
                 ))}

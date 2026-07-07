@@ -19,13 +19,18 @@ export default function AboutPage() {
   return (
     <main className="py-12">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl font-bold text-valorant-light mb-8 text-center">
+        <div className="inline-flex items-center gap-3 mb-3 w-full justify-center">
+          <span className="w-8 h-px bg-valorant-red/40" />
+          <span className="text-xs font-medium text-valorant-red tracking-[0.15em] uppercase">About</span>
+          <span className="w-8 h-px bg-valorant-red/40" />
+        </div>
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-valorant-light mb-8 text-center">
           关于本站
         </h1>
 
         <div className="space-y-8">
           {/* Introduction */}
-          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-6">
+          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-6">
             <h2 className="text-xl font-bold text-valorant-light mb-3">📖 关于战术手册</h2>
             <p className="text-gray-300 leading-relaxed">
               无畏契约战术手册是一个由社区玩家自发创建的战术参考网站。我们致力于为中文玩家提供
@@ -39,7 +44,7 @@ export default function AboutPage() {
           </section>
 
           {/* Content Sources */}
-          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-6">
+          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-6">
             <h2 className="text-xl font-bold text-valorant-light mb-3">📝 内容来源</h2>
             <ul className="space-y-2 text-gray-300">
               <li>• VCT（无畏契约冠军巡回赛）职业比赛战术分析</li>
@@ -50,7 +55,7 @@ export default function AboutPage() {
           </section>
 
           {/* Update Mechanism */}
-          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-6">
+          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-6">
             <h2 className="text-xl font-bold text-valorant-light mb-3">🔄 更新机制</h2>
             <p className="text-gray-300 leading-relaxed">
               我们会定期检测无畏契约官方版本更新。当新地图或新特工发布时，系统会自动提醒内容维护者，
@@ -59,7 +64,7 @@ export default function AboutPage() {
           </section>
 
           {/* Disclaimer */}
-          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-6 border-l-4 border-l-valorant-red">
+          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-6 border-l-4 border-l-valorant-red">
             <h2 className="text-xl font-bold text-valorant-light mb-3">⚠️ 免责声明</h2>
             <div className="space-y-3 text-gray-400 text-sm leading-relaxed">
               <p>
@@ -80,7 +85,7 @@ export default function AboutPage() {
           </section>
 
           {/* Contact */}
-          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-xl p-6 text-center">
+          <section className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-6 text-center">
             <h2 className="text-xl font-bold text-valorant-light mb-3">💬 反馈与贡献</h2>
             <p className="text-gray-300 leading-relaxed">
               如果你发现内容错误、有更好的战术建议，或想要参与内容维护，

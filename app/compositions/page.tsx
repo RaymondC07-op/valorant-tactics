@@ -24,7 +24,12 @@ export default function CompositionsPage() {
     <main className="py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-valorant-light mb-3">
+          <div className="inline-flex items-center gap-3 mb-3">
+            <span className="w-8 h-px bg-valorant-red/40" />
+            <span className="text-xs font-medium text-valorant-red tracking-[0.15em] uppercase">Team Comps</span>
+            <span className="w-8 h-px bg-valorant-red/40" />
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-valorant-light mb-3">
             阵容推荐
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -56,7 +61,7 @@ export default function CompositionsPage() {
                       </h3>
                       <div className="space-y-3">
                         {comp.attack.recommended.map((c, i) => (
-                          <div key={i} className="bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-3 border-l-4 border-l-valorant-red">
+                          <div key={i} className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-3 border-l-4 border-l-valorant-red">
                             <div className="flex items-start justify-between mb-2">
                               <h4 className="font-medium text-valorant-light text-sm">{c.name}</h4>
                               <span className={`text-xs rounded-full border px-1.5 py-0.5 ${DIFFICULTY_COLORS[c.difficulty] || ""}`}>
@@ -81,7 +86,7 @@ export default function CompositionsPage() {
                       </h3>
                       <div className="space-y-3">
                         {comp.defense.recommended.map((c, i) => (
-                          <div key={i} className="bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-3 border-l-4 border-l-valorant-blue">
+                          <div key={i} className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-3 border-l-4 border-l-valorant-blue">
                             <div className="flex items-start justify-between mb-2">
                               <h4 className="font-medium text-valorant-light text-sm">{c.name}</h4>
                               <span className={`text-xs rounded-full border px-1.5 py-0.5 ${DIFFICULTY_COLORS[c.difficulty] || ""}`}>
@@ -100,7 +105,7 @@ export default function CompositionsPage() {
                     </div>
                   </div>
                 ) : (
-                  <p className="text-gray-500 text-sm bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-4">
+                  <p className="text-gray-500 text-sm bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-4">
                     该地图的阵容推荐正在制作中。
                   </p>
                 )}

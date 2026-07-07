@@ -16,7 +16,7 @@ function CompCard({
   const sideColor = side === "attack" ? "border-l-valorant-red" : "border-l-valorant-blue";
 
   return (
-    <div className={`bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-4 border-l-4 ${sideColor}`}>
+    <div className={`corner-brackets bg-valorant-dark/40 border border-gray-700/20 rounded-sm p-4 border-l-2 ${sideColor}`}>
       <div className="flex items-start justify-between mb-3">
         <h4 className="text-lg font-semibold text-valorant-light">{entry.name}</h4>
         <span className={`text-xs rounded-full border px-2 py-0.5 font-medium ${DIFFICULTY_COLORS[entry.difficulty] || ""}`}>

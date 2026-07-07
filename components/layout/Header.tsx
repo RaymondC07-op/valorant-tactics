@@ -10,13 +10,16 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-valorant-dark/95 backdrop-blur border-b border-valorant-red/20">
+    <header className="sticky top-0 z-50 bg-valorant-dark/95 backdrop-blur border-b border-valorant-red/10">
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-valorant-red/30 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-valorant-red font-bold text-lg sm:text-xl tracking-wide group-hover:text-valorant-red/90 transition-colors">
-              {SITE_NAME}
+            <span className="w-2 h-2 rounded-sm bg-valorant-red pulse-dot" />
+            <span className="text-valorant-red font-bold text-lg sm:text-xl tracking-wider group-hover:text-valorant-red/90 transition-colors uppercase">
+              战术手册
             </span>
           </Link>
 
