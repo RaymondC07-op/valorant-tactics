@@ -27,7 +27,7 @@ export default function MapCard({ map }: MapCardProps) {
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-valorant-dark/90 to-transparent h-20" />
         <div className="absolute bottom-3 left-4 flex items-center gap-2">
           {map.sites.map((site) => (
-            <span key={site} className="text-xs bg-valorant-red/30 text-valorant-red border border-valorant-red/40 rounded px-1.5 py-0.5 font-bold">
+            <span key={site} className="text-xs bg-valorant-red/30 text-valorant-red border border-valorant-red/40 rounded-sm px-1.5 py-0.5 font-bold">
               {site}点
             </span>
           ))}
@@ -40,7 +40,7 @@ export default function MapCard({ map }: MapCardProps) {
           <h3 className="text-lg font-bold text-valorant-light group-hover:text-valorant-red transition-colors">
             {map.name}
           </h3>
-          <span className={`text-xs rounded-full border px-2 py-0.5 font-medium ${DIFFICULTY_COLORS[map.difficulty] || ""}`}>
+          <span className={`text-xs rounded-sm border px-2 py-0.5 font-medium ${DIFFICULTY_COLORS[map.difficulty] || ""}`}>
             {map.difficulty}
           </span>
         </div>
@@ -51,7 +51,7 @@ export default function MapCard({ map }: MapCardProps) {
         {map.features.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-3">
             {map.features.slice(0, 2).map((f, i) => (
-              <span key={i} className="text-xs text-gray-500 bg-white/5 rounded px-2 py-0.5">
+              <span key={i} className="text-xs text-gray-500 bg-white/5 rounded-sm px-2 py-0.5">
                 {f}
               </span>
             ))}

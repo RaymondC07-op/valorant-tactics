@@ -27,13 +27,13 @@ export default function Error({
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <button
             onClick={reset}
-            className="px-6 py-3 rounded-lg bg-valorant-red text-white font-medium hover:bg-valorant-red/90 transition-colors"
+            className="px-6 py-3 rounded-sm bg-valorant-red text-white font-medium hover:bg-valorant-red/90 transition-colors"
           >
             重试
           </button>
           <Link
             href="/"
-            className="px-6 py-3 rounded-lg border border-gray-600/50 text-gray-300 font-medium hover:bg-white/5 transition-colors"
+            className="px-6 py-3 rounded-sm border border-gray-600/50 text-gray-300 font-medium hover:bg-white/5 transition-colors"
           >
             ← 返回首页
           </Link>

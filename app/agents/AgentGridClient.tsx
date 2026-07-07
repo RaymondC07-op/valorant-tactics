@@ -25,7 +25,7 @@ export default function AgentGridClient({ initialAgents }: Props) {
       <div className="flex flex-wrap justify-center gap-2 mb-10">
         <button
           onClick={() => setSelectedRole("all")}
-          className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+          className={`px-4 py-2.5 rounded-sm text-sm font-medium transition-colors ${
             selectedRole === "all"
               ? "bg-valorant-red text-white"
               : "bg-valorant-dark/40 border border-gray-700/30 text-gray-400 hover:text-valorant-light"
@@ -40,7 +40,7 @@ export default function AgentGridClient({ initialAgents }: Props) {
             <button
               key={role}
               onClick={() => setSelectedRole(role)}
-              className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors border ${
+              className={`px-4 py-2.5 rounded-sm text-sm font-medium transition-colors border ${
                 isActive
                   ? "border-current text-white"
                   : "border-gray-700/30 text-gray-400 hover:text-valorant-light"

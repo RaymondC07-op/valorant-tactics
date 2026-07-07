@@ -4,9 +4,9 @@ import { getMapWithContent, getComposition, getAllMapSlugs } from "@/lib/content
 import MapSidebar from "@/components/map/MapSidebar";
 import CompositionTable from "@/components/composition/CompositionTable";
 import MapPoolBadge from "@/components/map/MapPoolBadge";
-import { DIFFICULTY_COLORS } from "@/lib/constants";
-import MapContentRenderer from "./MapContentRenderer";
+import TacticAccordion from "@/components/map/TacticAccordion";
 import CalloutImage from "@/components/map/CalloutImage";
+import { DIFFICULTY_COLORS } from "@/lib/constants";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -45,7 +45,7 @@ export default async function MapDetailPage({ params }: Props) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
         <div className="relative overflow-hidden rounded-sm bg-gradient-to-br from-valorant-dark/80 to-valorant-dark border border-gray-700/20 p-6 sm:p-8 mb-8">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-valorant-red/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-valorant-red/5 rounded-sm blur-3xl" />
           <div className="relative z-10">
             <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
               <div>
@@ -56,7 +56,7 @@ export default async function MapDetailPage({ params }: Props) {
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <MapPoolBadge inRotation={mapData.inRotation} />
-                <span className={`text-sm rounded-full border px-3 py-1 font-medium ${DIFFICULTY_COLORS[mapData.difficulty] || ""}`}>
+                <span className={`text-sm rounded-sm border px-3 py-1 font-medium ${DIFFICULTY_COLORS[mapData.difficulty] || ""}`}>
                   难度：{mapData.difficulty}
                 </span>
               </div>
@@ -87,32 +87,38 @@ export default async function MapDetailPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Content Layout */}
+        {/* Callout image */}
+        {mapData.calloutImage && (
+          <div className="mb-8">
+            <CalloutImage
+              src={mapData.calloutImage}
+              alt={`${mapData.name}报点图`}
+            />
+          </div>
+        )}
+
+        {/* Content Layout: Tactics + Sidebar */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-56 shrink-0 hidden lg:block">
-            <MapSidebar />
+            <MapSidebar sections={mapData.sections} />
           </aside>
 
-          {/* Main Content */}
+          {/* Main: Tactic Accordion */}
           <article className="flex-1 min-w-0">
-            {/* Callout Image */}
-            {mapData.calloutImage && (
-              <div className="mb-8">
-                <CalloutImage
-                  src={mapData.calloutImage}
-                  alt={`${mapData.name}报点图`}
-                />
+            {mapData.sections && mapData.sections.length > 0 ? (
+              <TacticAccordion sections={mapData.sections} />
+            ) : (
+              <div className="bg-valorant-dark/40 border border-gray-700/20 rounded-sm p-8 text-center text-gray-500">
+                战术内容解析中，请稍后刷新。
               </div>
             )}
-
-            <MapContentRenderer content={mapData.content} />
 
             {/* Composition Section */}
             {composition && <CompositionTable composition={composition} />}
 
             {!composition && (
-              <div className="my-8 p-6 bg-valorant-dark/40 border border-gray-700/30 rounded-xl text-center">
+              <div className="my-8 p-6 bg-valorant-dark/40 border border-gray-700/20 rounded-sm text-center">
                 <p className="text-gray-500">该地图的阵容推荐正在制作中，敬请期待。</p>
               </div>
             )}

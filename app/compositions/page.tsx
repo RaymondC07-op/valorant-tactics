@@ -64,7 +64,7 @@ export default function CompositionsPage() {
                           <div key={i} className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-3 border-l-4 border-l-valorant-red">
                             <div className="flex items-start justify-between mb-2">
                               <h4 className="font-medium text-valorant-light text-sm">{c.name}</h4>
-                              <span className={`text-xs rounded-full border px-1.5 py-0.5 ${DIFFICULTY_COLORS[c.difficulty] || ""}`}>
+                              <span className={`text-xs rounded-sm border px-1.5 py-0.5 ${DIFFICULTY_COLORS[c.difficulty] || ""}`}>
                                 {c.difficulty}
                               </span>
                             </div>
@@ -89,7 +89,7 @@ export default function CompositionsPage() {
                           <div key={i} className="bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-3 border-l-4 border-l-valorant-blue">
                             <div className="flex items-start justify-between mb-2">
                               <h4 className="font-medium text-valorant-light text-sm">{c.name}</h4>
-                              <span className={`text-xs rounded-full border px-1.5 py-0.5 ${DIFFICULTY_COLORS[c.difficulty] || ""}`}>
+                              <span className={`text-xs rounded-sm border px-1.5 py-0.5 ${DIFFICULTY_COLORS[c.difficulty] || ""}`}>
                                 {c.difficulty}
                               </span>
                             </div>

@@ -8,6 +8,7 @@ import type {
   Agent,
   MapSlug,
   AgentSlug,
+  TacticChapter,
 } from "./types";
 import { MAP_ORDER } from "./constants";
 
@@ -151,10 +152,83 @@ export function getMapWithContent(slug: MapSlug): MapWithContent | undefined {
   if (!fs.existsSync(filePath)) return undefined;
   const raw = fs.readFileSync(filePath, "utf-8");
   const { frontmatter, content } = parseFrontmatter(raw);
+  const sections = parseTacticSections(content);
   return {
     ...(frontmatter as unknown as MapFrontmatter),
     content,
+    sections,
   };
+}
+
+// ---- 战术章节解析 ----
+
+export function parseTacticSections(rawMd: string): TacticChapter[] {
+  const chapters: TacticChapter[] = [];
+  const lines = rawMd.split("\n");
+  let i = 0;
+
+  while (i < lines.length) {
+    const h2Match = lines[i].match(/^## (.+)$/);
+    if (h2Match) {
+      const chapter: TacticChapter = {
+        id: slugify(h2Match[1]),
+        title: h2Match[1],
+        content: "",
+        level: 2,
+        subsections: [],
+      };
+      i++;
+      // Collect all lines until next H2
+      const contentLines: string[] = [];
+      let currentH3: { title: string; content: string[] } | null = null;
+
+      while (i < lines.length && !lines[i].match(/^## /)) {
+        const h3Match = lines[i].match(/^### (.+)$/);
+        if (h3Match) {
+          // Save previous H3
+          if (currentH3) {
+            chapter.subsections.push({
+              id: slugify(currentH3.title),
+              title: currentH3.title,
+              content: currentH3.content.join("\n").trim(),
+              level: 3,
+              subsections: [],
+            });
+          }
+          currentH3 = { title: h3Match[1], content: [] };
+        } else if (currentH3) {
+          currentH3.content.push(lines[i]);
+        } else {
+          contentLines.push(lines[i]);
+        }
+        i++;
+      }
+      // Save last H3
+      if (currentH3) {
+        chapter.subsections.push({
+          id: slugify(currentH3.title),
+          title: currentH3.title,
+          content: currentH3.content.join("\n").trim(),
+          level: 3,
+          subsections: [],
+        });
+      }
+      chapter.content = contentLines.join("\n").trim();
+      chapters.push(chapter);
+    } else {
+      i++;
+    }
+  }
+
+  return chapters;
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[（）()（）]/g, "")
+    .replace(/[^\w一-鿿]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 export function getMapsInRotation(): MapFrontmatter[] {

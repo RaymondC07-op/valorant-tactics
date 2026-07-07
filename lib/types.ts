@@ -41,6 +41,7 @@ export interface MapFrontmatter {
 
 export interface MapWithContent extends MapFrontmatter {
   content: string; // raw MDX body
+  sections?: TacticChapter[]; // parsed H2/H3 structure
 }
 
 // ---- 阵容 ----
@@ -50,6 +51,19 @@ export interface CompositionEntry {
   rationale: string;
   difficulty: Difficulty;
   winCondition: string;
+  tactics?: {
+    coordination: string;   // 5人技能配合，局部协同
+    strategy: string;       // 整体控图/转点/经济策略
+  };
+}
+
+// Parsed MDX chapter structure
+export interface TacticChapter {
+  id: string;
+  title: string;
+  content: string;
+  level: 2 | 3;
+  subsections: TacticChapter[];
 }
 
 export interface MapComposition {

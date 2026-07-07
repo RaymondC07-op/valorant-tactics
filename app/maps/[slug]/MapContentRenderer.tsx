@@ -14,7 +14,7 @@ const components: Components = {
     <img
       src={src}
       alt={alt || "报点图"}
-      className="rounded-xl border border-gray-700/30 my-6 w-full max-w-3xl"
+      className="rounded-sm border border-gray-700/30 my-6 w-full max-w-3xl"
       loading="lazy"
       {...props}
     />
@@ -37,7 +37,7 @@ export default function MapContentRenderer({ content }: Props) {
       prose-table:border-collapse
       prose-th:border prose-th:border-gray-600/50 prose-th:bg-valorant-dark/50 prose-th:px-4 prose-th:py-2 prose-th:text-valorant-gold
       prose-td:border prose-td:border-gray-600/50 prose-td:px-4 prose-td:py-2 prose-td:text-gray-300
-      prose-img:rounded-xl prose-img:border prose-img:border-gray-700/30
+      prose-img:rounded-sm prose-img:border prose-img:border-gray-700/30
     ">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}

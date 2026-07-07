@@ -39,7 +39,7 @@ export default function FilteredMapsClient({ maps }: Props) {
   return (
     <>
       <div className="flex justify-center mb-8">
-        <div className="inline-flex flex-wrap bg-valorant-dark/40 border border-gray-700/30 rounded-lg p-1 gap-1">
+        <div className="inline-flex flex-wrap bg-valorant-dark/40 border border-gray-700/30 rounded-sm p-1 gap-1">
           {filters.map((f) => (
             <button
               key={f.key}
