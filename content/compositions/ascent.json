@@ -1,0 +1,48 @@
+{
+  "mapSlug": "ascent",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "标准控中阵容",
+        "agents": ["jett", "sova", "kayo", "omen", "killjoy"],
+        "rationale": "猎枭+凯欧提供全图信息与压制，捷风突破A大/B长，幽影烟雾覆盖中路，奇乐锁点防回防。这是职业比赛最常见组合，适应性强。",
+        "difficulty": "中级",
+        "winCondition": "控制中路后分推A/B，利用奇乐大招锁定包点完成下包"
+      },
+      {
+        "name": "双烟运营阵容",
+        "agents": ["jett", "sova", "brimstone", "omen", "killjoy"],
+        "rationale": "炼狱+幽影双重烟雾可实现对A、B、中路的全覆盖分割，配合猎枭侦察箭获取信息后精准执行。适合喜欢慢节奏运营的队伍。",
+        "difficulty": "中级",
+        "winCondition": "利用双烟分割战场，逐步蚕食防守方空间，最后集中优势兵力进点"
+      },
+      {
+        "name": "速攻Rush阵容",
+        "agents": ["raze", "breach", "gekko", "omen", "sage"],
+        "rationale": "雷兹+铁臂技能清点极快，盖可皮蛋下包安全无风险，贤者冰墙断后路。适合不想打拉扯、直接冲点的队伍。",
+        "difficulty": "初级",
+        "winCondition": "同步冲点，利用大量AOE技能制造混乱，5秒内完成清点下包"
+      }
+    ],
+    "alternativeAgents": ["phoenix", "fade", "viper", "chamber"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "双烟铁桶防守",
+        "agents": ["chamber", "sova", "viper", "omen", "killjoy"],
+        "rationale": "钱博尔架狙控制A大/B长长廊，蝰蛇+幽影双烟无限拖延进攻节奏，奇乐单守B点，猎枭反清信息箭。这是顶级职业队的防守标配。",
+        "difficulty": "高级",
+        "winCondition": "利用双烟分割战场，逐个击杀分散的进攻方，拖延时间至最后"
+      },
+      {
+        "name": "标准信息防守",
+        "agents": ["jett", "sova", "kayo", "omen", "killjoy"],
+        "rationale": "进攻防守都可用的通用阵容。捷风烟中架狙/短管，猎枭凯欧双信息压制，奇乐锁点。灵活性强，攻防转换快。",
+        "difficulty": "中级",
+        "winCondition": "信息压制→提前预判进攻方向→先行布防→以多打少"
+      }
+    ]
+  }
+}

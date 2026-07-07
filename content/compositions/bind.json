@@ -1,0 +1,48 @@
+{
+  "mapSlug": "bind",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "双烟传送控制",
+        "agents": ["raze", "skye", "brimstone", "viper", "cypher"],
+        "rationale": "炼狱+蝰蛇双重烟雾在无中路的地图上提供完整的A/B分割能力。蝰蛇毒墙从A短穿到B长，炼狱三烟精准覆盖进点路线。雷兹利用传送门快速转点，斯凯闪光清死角，零日绊线封住传送门防绕后。",
+        "difficulty": "中级",
+        "winCondition": "双烟同时封锁A、B两点视野，利用传送门快速转点形成局部人数优势"
+      },
+      {
+        "name": "速攻双传送",
+        "agents": ["raze", "yoru", "fade", "omen", "sage"],
+        "rationale": "夜露和雷兹能最大程度利用传送门机制——夜露假身进传送门欺骗防守方，雷兹炸弹车穿传送门清死角。黑梦幽灵跟踪球可穿过传送门追踪敌人。贤者冰墙封B长/A短增加进点安全性。",
+        "difficulty": "高级",
+        "winCondition": "利用传送门特性实施多方向欺骗，防守方信息混乱时瞬间5人进点"
+      },
+      {
+        "name": "标准运营推进",
+        "agents": ["raze", "gekko", "skye", "brimstone", "killjoy"],
+        "rationale": "盖可皮蛋下包安全性在无中路的Map极高，雷兹清点能力强，斯凯闪+回血提供持续战斗力，炼狱烟雾三连精准覆盖，奇乐纳米蜂群封锁CT回防路线。适合不喜欢花哨操作、稳扎稳打的队伍。",
+        "difficulty": "初级",
+        "winCondition": "逐步清点推进，利用盖可安全下包，奇乐道具锁回防路线"
+      }
+    ],
+    "alternativeAgents": ["phoenix", "breach", "astra", "chamber"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "信息防守阵",
+        "agents": ["raze", "fade", "viper", "omen", "killjoy"],
+        "rationale": "黑梦幽灵+Lurk信息可在传送门出口直接获取进攻方动向，蝰蛇毒墙+幽影烟雾无限拖延进攻节奏，雷兹手雷在狭小通道威胁极大，奇乐单人可守B点释放人手支援A。",
+        "difficulty": "中级",
+        "winCondition": "信息先行→判断进攻方向→快速调度→在传送门出口打伏击"
+      },
+      {
+        "name": "双哨传送锁",
+        "agents": ["raze", "skye", "brimstone", "killjoy", "cypher"],
+        "rationale": "零+奇乐双哨卫彻底锁死传送门出口。零绊线和摄像头布置在A短/B短传送门两端，任何传送行为立即被发现。奇乐看住B点默认通道，炼狱封CT回防路线，斯凯提供全图闪和血量支援。",
+        "difficulty": "中级",
+        "winCondition": "用道具完全封锁传送门绕后可能，逼迫进攻方正面硬碰硬"
+      }
+    ]
+  }
+}

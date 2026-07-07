@@ -1,0 +1,48 @@
+{
+  "mapSlug": "haven",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "三路信息压制",
+        "agents": ["jett", "sova", "kayo", "omen", "killjoy"],
+        "rationale": "三图唯一需要覆盖ABC三个点的地图。猎枭侦察箭从A长/C长获取信息，凯欧刀压制防守方位置，幽影烟雾可从中路走廊覆盖任意两点。捷风高机动性在三点之间快速切换。奇乐纳米蜂群断CT回防。",
+        "difficulty": "中级",
+        "winCondition": "猎枭+凯欧双重信息掌握防守分布，选择防守最薄弱的点集中突破"
+      },
+      {
+        "name": "中路突破转点",
+        "agents": ["phoenix", "breach", "sova", "omen", "sage"],
+        "rationale": "铁臂震地可在中路车库穿透墙面击中防守方，不死鸟闪光自保进点，猎枭侦察箭确认三个点的防守人数分布。贤者冰墙封C长或A长制造安全下包空间。中路突破后可快速转A/B/C任意点。",
+        "difficulty": "中级",
+        "winCondition": "控制中路车库后，根据信息选择防守人数最少的目标点进行闪电转点"
+      },
+      {
+        "name": "C点速攻阵",
+        "agents": ["raze", "gekko", "fade", "brimstone", "cypher"],
+        "rationale": "C点是Haven最脆弱的防守点（通常单人防守），雷兹+盖可技能可在5秒内清空C点，炼狱三烟覆盖CT和C长死角，黑梦幽灵确认车库是否有人增援，零绊线防A/B防守方绕后。",
+        "difficulty": "初级",
+        "winCondition": "开局快速Rush C点，利用人数优势瞬间清点下包"
+      }
+    ],
+    "alternativeAgents": ["neon", "skye", "viper", "chamber", "vyse"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "标准三点防守",
+        "agents": ["jett", "sova", "cypher", "omen", "killjoy"],
+        "rationale": "三点地图的经典防守配置。零单人守C点（绊线+摄像头全覆盖），奇乐单人守A点（炮台+纳米蜂群锁A长）。幽影支援中路和任意被进攻的点。捷风用狙击枪在中路/B点之间游走威慑。猎枭侦察箭开局获取进攻方主攻方向。",
+        "difficulty": "高级",
+        "winCondition": "双哨卫各锁一点解放人手，中路灵活调度形成以多打少"
+      },
+      {
+        "name": "双烟稳固防守",
+        "agents": ["chamber", "sova", "viper", "omen", "killjoy"],
+        "rationale": "蝰蛇+幽影双烟可实现对三个点的烟雾覆盖分割。钱博尔传送锚点在中路可随时支援任意点，架狙控制中路长走廊。奇乐单守C点释放更多人手。猎枭侦察箭提前预判进攻方向。职业队最爱用的Haven防守阵容。",
+        "difficulty": "高级",
+        "winCondition": "双烟无限拖延进攻节奏，逐个消耗进攻方时间和人数"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+name: Check for New Valorant Content
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run content diff script
+        id: diff
+        run: npx tsx scripts/check-new-content.ts
+
+      - name: Read detection results
+        id: read
+        run: |
+          if [ -n "${{ steps.diff.outputs.has_new }}" ] && [ "${{ steps.diff.outputs.has_new }}" = "true" ]; then
+            echo "New content detected!"
+          else
+            echo "No new content."
+          fi
+
+      - name: Create Issue if new content found
+        if: steps.diff.outputs.has_new == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const newAgents = `${{ steps.diff.outputs.new_agents }}`;
+            const newMaps = `${{ steps.diff.outputs.new_maps }}`;
+
+            let body = "## 🔔 检测到新内容\n\n";
+            body += "无畏契约 API 检测到以下新内容，建议更新网站：\n\n";
+
+            if (newAgents && newAgents !== "") {
+              body += "### 🆕 新特工\n\n";
+              body += newAgents.replace(/\\n/g, "\n");
+              body += "\n\n";
+            }
+
+            if (newMaps && newMaps !== "") {
+              body += "### 🗺️ 新地图\n\n";
+              body += newMaps.replace(/\\n/g, "\n");
+              body += "\n\n";
+            }
+
+            body += "---\n";
+            body += "### 📋 更新清单\n\n";
+            body += "1. 将新特工添加到 `content/agents/agents.json`\n";
+            body += "2. 为新地图创建 `content/maps/{slug}.mdx` 战术攻略\n";
+            body += "3. 为新地图创建 `content/compositions/{slug}.json` 阵容推荐\n";
+            body += "4. 更新 `lib/constants.ts` 中的 `MAP_ORDER`\n";
+            body += "5. 提交 PR 并合并，触发 Vercel 自动部署\n";
+            body += "\n⚠️ 请人工审核内容后再发布。";
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "🔄 检测到新无畏契约内容，需要更新",
+              body,
+              labels: ["auto-detected", "content-update"],
+            });

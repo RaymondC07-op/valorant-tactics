@@ -1,0 +1,48 @@
+{
+  "mapSlug": "pearl",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "标准推进阵容",
+        "agents": ["jett", "fade", "kayo", "omen", "killjoy"],
+        "rationale": "深海明珠无地图机关，全靠枪法和道具配合。捷风烟中进点能力在此图A大和B长极为关键，黑梦+凯欧双信息可覆盖中路连接器两侧，幽影烟雾灵活覆盖进点路线，奇乐纳米蜂群封锁CT回防通道。通用性最强，适合大多数队伍。",
+        "difficulty": "中级",
+        "winCondition": "中路连接器控制→获取信息→选择A或B推进→双信息压制→同步进点下包"
+      },
+      {
+        "name": "速攻Rush阵容",
+        "agents": ["phoenix", "breach", "gekko", "brimstone", "sage"],
+        "rationale": "菲尼克斯+铁臂双闪清点效率极高，盖可皮蛋在无机关地图下包最安全，炼狱三烟覆盖包点CT视野，贤者冰墙封断后路并复活关键队友。适合不想打慢节奏、喜欢直接碾压进点的队伍。在B长廊Rush效果极佳。",
+        "difficulty": "初级",
+        "winCondition": "双闪开路→5人抱团推一个点→炼狱封烟→盖可下包→贤者封墙守包"
+      },
+      {
+        "name": "双烟运营阵容",
+        "agents": ["jett", "sova", "astra", "omen", "chamber"],
+        "rationale": "幽影+星礈双烟可实现对A、B、中路连接器的全覆盖分割，星礈的全球烟雾能力在此图极具价值。猎枭侦察箭获取长廊信息后精准执行。钱博尔传送锚点提供快速转点能力，捷风突破核心。适合高端排位和职业比赛。",
+        "difficulty": "高级",
+        "winCondition": "双烟分割战场→星礈全球烟雾掩护→猎枭侦察→捷风突破→钱博尔架狙守包"
+      }
+    ],
+    "alternativeAgents": ["raze", "skye", "viper", "cypher"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "双哨位锁图防守",
+        "agents": ["jett", "fade", "omen", "killjoy", "cypher"],
+        "rationale": "零+奇乐双哨卫彻底锁死A大和B长廊。零摄像头+绊线布置在B长廊监控整个B区进攻路线，奇乐炮塔+警报机器人覆盖A大。黑梦幽灵提供中路连接器信息，幽影烟雾灵活封锁，捷风在CT用狙击枪架长廊。进攻方不破哨位难以进点。",
+        "difficulty": "中级",
+        "winCondition": "双哨锁死两条长廊→信息压制→提前判断进攻方向→集中防守→拖延时间"
+      },
+      {
+        "name": "信息防守阵",
+        "agents": ["jett", "sova", "kayo", "omen", "chamber"],
+        "rationale": "猎枭+凯欧双信息覆盖A/B两个进攻方向，钱博尔传送锚点在A点提供安全架狙位并可快速转B。幽影烟雾在中路连接器灵活布置，捷风利用烟雾进点反清。灵活性强，适合喜欢主动反清的防守方。",
+        "difficulty": "中级",
+        "winCondition": "信息先行→猎枭侦察箭反清→凯欧压制进攻技能→钱博尔架狙取得首杀→逐个击破"
+      }
+    ]
+  }
+}

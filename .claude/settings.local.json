@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd.exe *)",
+      "Bash(powershell.exe *)",
+      "Read(//c//**)",
+      "Bash(mv \"C:/Users/Raymond Zhang/Desktop/first-cc\" \"C:/Users/Raymond Zhang/Desktop/无畏契约战术\")",
+      "Bash(wmic process *)",
+      "Bash(schtasks.exe /Create /SC ONCE /TN \"RenameFolder\" /TR \"cmd.exe /c timeout /t 5 /nobreak >nul && ren \\\\\"C:\\\\\\\\Users\\\\\\\\Raymond Zhang\\\\\\\\Desktop\\\\\\\\first-cc\\\\\" \\\\\"无畏契约战术\\\\\" && del \\\\\"C:\\\\\\\\Users\\\\\\\\Raymond Zhang\\\\\\\\Desktop\\\\\\\\_rename_temp.bat\\\\\"\" /ST 00:00 /F)",
+      "Bash(schtasks.exe /Run /TN \"RenameFolder\")",
+      "Bash(cp -r \"C:/Users/Raymond Zhang/Desktop/first-cc/\"* \"C:/Users/Raymond Zhang/Desktop/无畏契约战术/\")",
+      "Bash(cp -r \"C:/Users/Raymond Zhang/Desktop/first-cc/\".[!.]* \"C:/Users/Raymond Zhang/Desktop/无畏契约战术/\")"
+    ]
+  }
+}

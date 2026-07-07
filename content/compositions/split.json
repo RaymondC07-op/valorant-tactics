@@ -1,0 +1,48 @@
+{
+  "mapSlug": "split",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "控中包夹阵",
+        "agents": ["raze", "skye", "omen", "viper", "sage"],
+        "rationale": "Split中路是全局命脉。蝰蛇毒墙从下水道延伸到B天，幽影烟雾覆盖A天/B天，斯凯闪光+回血提供持续作战能力。贤者冰墙封B车库或A小制造安全推进空间。雷兹手雷在中路和A小的狭窄通道威力极大。控制中路后可A/B任意转点。",
+        "difficulty": "中级",
+        "winCondition": "夺取中路控制权→分割A/B防守→选择一边集中兵力突破"
+      },
+      {
+        "name": "A点强攻阵",
+        "agents": ["raze", "breach", "fade", "omen", "killjoy"],
+        "rationale": "铁臂震地弹可在A小入口穿墙命中A天防守方，黑梦幽灵球追踪A天/A斜坡，雷兹炸药包飞A天强制清高位。幽影烟雾覆盖CT和A天，奇乐纳米蜂群封CT防止回防。A点是Split进攻相对容易的点。",
+        "difficulty": "初级",
+        "winCondition": "同步A点压制——清A天→封CT→下包→奇乐锁回防路线"
+      },
+      {
+        "name": "B点慢推阵",
+        "agents": ["jett", "sova", "skye", "omen", "cypher"],
+        "rationale": "猎枭侦察箭可在B车库外获取B点信息，捷风烟中进B天用狙击威胁，斯凯带领团队慢推清死角。零绊线布置在A小防绕后。幽影烟雾覆盖B天。B点进攻需要耐心清掉所有角落。",
+        "difficulty": "高级",
+        "winCondition": "耐心清点B天→B点→CT，利用捷风狙击优势逐个击杀防守方"
+      }
+    ],
+    "alternativeAgents": ["phoenix", "yoru", "brimstone", "chamber", "deadlock"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "双狙据点防守",
+        "agents": ["jett", "chamber", "viper", "omen", "killjoy"],
+        "rationale": "Split是防守方优势图，双狙击手在A天和B天各一人可以完全封锁进点通道。蝰蛇毒墙+幽影烟雾阻止进攻方推进。钱博尔和捷风各守一边，利用传送/冲刺快速脱离危险位置。奇乐道具封锁中路下水道。",
+        "difficulty": "高级",
+        "winCondition": "双狙占据高低优势位置，任何进点尝试都被先手击杀"
+      },
+      {
+        "name": "中重防守阵",
+        "agents": ["raze", "skye", "viper", "omen", "sage"],
+        "rationale": "重兵防守中路——蝰蛇毒墙封锁下水道，斯凯闪光反清中路，贤者冰墙封B车库，雷兹手雷和炸药包在中路狭窄区域造成毁灭性伤害。放弃A小/B小的一部分控制权，换来中路和B车库的绝对优势防守。",
+        "difficulty": "中级",
+        "winCondition": "严防死守中路→迫使进攻方只能走边路→边路防守以少打多依然有地形优势"
+      }
+    ]
+  }
+}

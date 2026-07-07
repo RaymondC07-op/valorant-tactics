@@ -1,0 +1,48 @@
+{
+  "mapSlug": "icebox",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "垂直打击阵容",
+        "agents": ["raze", "sova", "kayo", "viper", "sage"],
+        "rationale": "雷兹炸药包可利用滑索和垂直高度进行多角度清点，猎枭侦察箭从高处可覆盖A点厨房和B区全部区域。凯欧压制刀封锁防守方技能，蝰蛇毒墙从A区穿到B区实现垂直分割，贤者冰墙可封住关键滑索出口。最大化利用冰岛的多层地形。",
+        "difficulty": "高级",
+        "winCondition": "利用垂直高度获取信息→凯欧压制→蝰蛇分割→雷兹高空清点→多方向同步进点"
+      },
+      {
+        "name": "速攻B区Rush",
+        "agents": ["raze", "breach", "gekko", "brimstone", "sage"],
+        "rationale": "B区厨房入口狭窄且防守方站位固定，铁臂震颤+闪光可清掉B区所有死角。雷兹机器人+榴弹跟进，炼狱三烟覆盖B区CT和黄箱，盖可皮蛋安全下包，贤者冰墙封B区后路。B区是最容易Rush的点位。",
+        "difficulty": "初级",
+        "winCondition": "铁臂震B区→雷兹清点→炼狱封烟→5人冲B→盖可下包→贤者封墙守包"
+      },
+      {
+        "name": "控中运营阵容",
+        "agents": ["jett", "sova", "fade", "omen", "killjoy"],
+        "rationale": "中路管道控制后可选择A/B推进，灵活度极高。幽影利用传送（暗影步）在高台和低地间快速移动，猎枭+黑梦双重侦察覆盖中路上下两层。奇乐炮塔布置在滑索出口防绕后，捷风利用滑索快速转点。通用性最强的阵容。",
+        "difficulty": "中级",
+        "winCondition": "控制中路管道→侦察确认A/B防守人数→选择弱势点集中推进→奇乐封锁回防"
+      }
+    ],
+    "alternativeAgents": ["neon", "skye", "harbor", "cypher"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "多层垂直防守",
+        "agents": ["jett", "sova", "viper", "omen", "killjoy"],
+        "rationale": "幽影在A区高台用传送配合狙击枪可覆盖多个角度，蝰蛇毒墙从A管道穿到B厨房阻止进攻推进。猎枭侦察箭从高处可反清A/B两个方向，奇乐道具锁住B区厨房入口。捷风利用滑索在高低台间快速移动支援。充分利用冰岛的多层地形优势。",
+        "difficulty": "高级",
+        "winCondition": "高位获取信息→毒墙拖延→侦察反清→滑索快速转点支援→以多打少"
+      },
+      {
+        "name": "陷阱防守阵",
+        "agents": ["raze", "sova", "kayo", "omen", "cypher"],
+        "rationale": "零的绊线+摄像头布置在A区管道和B区厨房入口，任何进攻动向立即被发现。凯欧压制刀可反制进攻方技能，猎枭侦察箭提供远程信息。雷兹手雷在中层狭小空间威胁极大，幽影烟雾灵活封锁关键入口。适合信息驱动的防守风格。",
+        "difficulty": "中级",
+        "winCondition": "陷阱获取信息→判断进攻方向→提前落位→在狭窄通道伏击→逐个击破"
+      }
+    ]
+  }
+}

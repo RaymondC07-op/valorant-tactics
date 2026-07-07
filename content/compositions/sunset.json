@@ -1,0 +1,48 @@
+{
+  "mapSlug": "sunset",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "标准控中阵容",
+        "agents": ["raze", "fade", "kayo", "omen", "cypher"],
+        "rationale": "雷兹在中路狭小空间清点效率极高，黑梦+凯欧提供双重信息压制，幽影烟雾覆盖A大/B区进点路线，零的绊线封锁回防通道。中路可破坏门是关键争夺点，控制后可选A或B同步进点。",
+        "difficulty": "中级",
+        "winCondition": "控制中路→用黑梦幽灵确认防守方站位→雷兹清点→幽影封烟→5人同步进点下包"
+      },
+      {
+        "name": "速攻Rush阵容",
+        "agents": ["raze", "neon", "breach", "brimstone", "sage"],
+        "rationale": "雷兹+铁臂技能可快速清掉A大/B区所有角落，霓虹滑铲进点速度极快，炼狱三烟精准覆盖防守方CT和站点视野，贤者冰墙封断后路并在下包后复活关键队友。适合不想打慢节奏、喜欢碾压式进点的队伍。",
+        "difficulty": "初级",
+        "winCondition": "铁臂震+闪光开路→雷兹榴弹+机器人清点→霓虹高速进点→炼狱封烟→5秒内完成清点下包"
+      },
+      {
+        "name": "双烟运营阵容",
+        "agents": ["jett", "sova", "kayo", "omen", "viper"],
+        "rationale": "幽影+蝰蛇双烟组合可实现A大、B区、中路的全覆盖分割。猎枭侦察箭获取信息后精准执行分推。捷风烟中进点能力强，凯欧压制刀压制防守方技能。适合喜欢慢节奏、逐步蚕食防守方空间的战队。",
+        "difficulty": "高级",
+        "winCondition": "利用双烟逐步分割战场→获取信息→选择弱势点位集中优势兵力突破→下包后利用残局能力守包"
+      }
+    ],
+    "alternativeAgents": ["phoenix", "gekko", "astra", "killjoy"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "双烟铁桶防守",
+        "agents": ["jett", "sova", "viper", "omen", "killjoy"],
+        "rationale": "蝰蛇毒墙从中路延伸到A大，幽影烟雾覆盖B区入口，双烟可无限拖延进攻节奏。猎枭侦察箭反清A大和B区信息，奇乐单人可锁住B点释放更多人手到A和中路。捷风架狙控制A大长廊。职业级防守阵容。",
+        "difficulty": "高级",
+        "winCondition": "双烟分割战场→信息压制→逐个击杀分散的进攻方→拖延时间至最后"
+      },
+      {
+        "name": "信息陷阱防守",
+        "agents": ["raze", "fade", "kayo", "omen", "cypher"],
+        "rationale": "零的摄像头+绊线布置在中路门和B区入口，任何进攻动向立即暴露。黑梦幽灵跟踪球可在关键通道获取进攻方位置。凯欧压制刀反制进攻方技能。雷兹手雷在中路狭小空间可造成毁灭性伤害。灵活切换攻防节奏。",
+        "difficulty": "中级",
+        "winCondition": "信息先行→提前预判进攻方向→先行布防→在关键狭窄通道设伏以多打少"
+      }
+    ]
+  }
+}

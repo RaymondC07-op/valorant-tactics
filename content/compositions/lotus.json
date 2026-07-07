@@ -1,0 +1,48 @@
+{
+  "mapSlug": "lotus",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "标准三路运营",
+        "agents": ["raze", "skye", "omen", "brimstone", "killjoy"],
+        "rationale": "莲华古城三个点位需要灵活的烟雾调度。幽影+炼狱双烟可覆盖A/B/C任意组合。雷兹在A树根/B沙地的狭窄通道威胁极大。斯凯闪光+回血提供持续战斗支持。奇乐纳米蜂群断CT回防。适合喜欢慢节奏运营的队伍。",
+        "difficulty": "中级",
+        "winCondition": "双烟分割三点，获取信息后选择防守最薄弱的点执行"
+      },
+      {
+        "name": "A点旋转门速攻",
+        "agents": ["raze", "fade", "gekko", "omen", "sage"],
+        "rationale": "利用A点旋转门和A通道的静音坠落特性发起突然袭击。黑梦幽灵球确认A点防守人数，雷兹炸药包飞A楼梯清高位，盖可皮蛋安全下A点包，贤者冰墙封A通道防回防。旋转门关闭后可阻断CT支援。",
+        "difficulty": "初级",
+        "winCondition": "关闭旋转门→静音坠入A点→瞬间5人进点→下包后利用门拖延回防"
+      },
+      {
+        "name": "C点破墙阵",
+        "agents": ["jett", "sova", "breach", "omen", "harbor"],
+        "rationale": "港湾是莲华古城的热门烟位选择——高墙可从C通道直达B点。猎枭侦察箭获取C点信息，铁臂震地穿墙命中C点防守方。捷风进C点后迅速控制C水。破墙后C通道和B点的连接打开，转点更灵活。",
+        "difficulty": "高级",
+        "winCondition": "破墙打通C-B连接→港湾高墙分割战场→分推B和C两个点"
+      }
+    ],
+    "alternativeAgents": ["neon", "yoru", "astra", "cypher", "clove"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "三点分散防守",
+        "agents": ["jett", "sova", "omen", "killjoy", "cypher"],
+        "rationale": "零单人守C点（绊线全覆盖C水），奇乐单人守A点（炮台看旋转门，纳米蜂群断A通道），幽影+捷风+猎枭三人游走中路和B点。猎枭侦察箭获取开局信息判断进攻方向。捷风用狙击枪在中路高位威慑。",
+        "difficulty": "高级",
+        "winCondition": "双哨卫各锁一点，中路三人组根据信息快速调度支援被攻点"
+      },
+      {
+        "name": "A点重点防守",
+        "agents": ["raze", "fade", "cypher", "omen", "killjoy"],
+        "rationale": "A点是莲华古城防守最困难的位置——旋转门机制让进攻方可以突然袭击。双哨卫（零+奇乐）重点布防A点：零摄像头监视旋转门外，奇乐炮台架A通道。黑梦幽灵球反清A点。雷兹手雷在A旋转门狭小空间内威胁极大。",
+        "difficulty": "中级",
+        "winCondition": "A点重兵把守拖延进攻→B/C点防守方争取时间→回防时以多打少"
+      }
+    ]
+  }
+}

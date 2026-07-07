@@ -1,0 +1,48 @@
+{
+  "mapSlug": "breeze",
+  "updatedAt": "2026-07-07",
+  "attack": {
+    "recommended": [
+      {
+        "name": "双烟狙击推进",
+        "agents": ["jett", "sova", "harbor", "viper", "chamber"],
+        "rationale": "微风岛屿长视野极多，狙击手是绝对核心。捷风+钱博尔双OP阵容可在A大和B区同时施加远程压力。蝰蛇毒墙从A大厅穿到B区实现全图分割，海神水墙提供移动掩护。猎枭侦察箭在开阔地形中价值最大化。职业赛经典配置。",
+        "difficulty": "高级",
+        "winCondition": "狙击手先手获得击杀→蝰蛇封墙切割战场→海神掩护进点→猎枭获取残局信息→逐步推进"
+      },
+      {
+        "name": "速攻A大推",
+        "agents": ["raze", "skye", "gekko", "brimstone", "sage"],
+        "rationale": "雷兹在A大厅狭小入口清点效率极高，斯凯闪光鸟探A大死角，盖可皮蛋安全下包，炼狱三烟覆盖A点CT和B区回防路线，贤者冰墙封断A大入口防绕后。适合快速解决战斗、不想打长距离对枪的队伍。",
+        "difficulty": "初级",
+        "winCondition": "5人集结A大→斯凯闪+雷兹清→炼狱封烟→贤者封墙→盖可皮蛋下包→守包待援"
+      },
+      {
+        "name": "控中运营阵容",
+        "agents": ["jett", "sova", "kayo", "omen", "killjoy"],
+        "rationale": "中路控制后可选A或B推进，灵活度极高。幽影烟雾覆盖A大和B区视野，猎枭侦察箭在中路可覆盖A/B两个方向，凯欧压制刀封防守方技能，奇乐纳米蜂群封锁CT回防。捷风利用A大厅滑槽快速转点。通用性最强的阵容。",
+        "difficulty": "中级",
+        "winCondition": "控制中路→获取信息→选择弱势点→分推包夹→利用人数优势下包"
+      }
+    ],
+    "alternativeAgents": ["yoru", "fade", "astra", "cypher"]
+  },
+  "defense": {
+    "recommended": [
+      {
+        "name": "双OP远程防守",
+        "agents": ["jett", "sova", "viper", "chamber", "killjoy"],
+        "rationale": "捷风+钱博尔双狙击手在A大和B区中门各守一条长走廊，蝰蛇毒墙拖延进攻推进，猎枭侦察箭反清，奇乐锁点防Rush。微风岛屿长视野优势被最大化利用，进攻方没有狙击手将极其困难。",
+        "difficulty": "高级",
+        "winCondition": "狙击手获取首杀→毒墙拖延→侦察箭反清→逐个击破→拖延时间"
+      },
+      {
+        "name": "标准全图防守",
+        "agents": ["jett", "sova", "kayo", "omen", "cypher"],
+        "rationale": "零的摄像头布置在B区中门可监控B区整个开阔区域，绊线锁住A大厅入口。幽影烟雾在中路灵活布置，猎枭+凯欧双信息可覆盖A/B两个进攻方向，捷风在A大用OP架枪。适应性强，攻防转换快。",
+        "difficulty": "中级",
+        "winCondition": "信息覆盖全图→提前判断进攻方向→集中防守→以多打少"
+      }
+    ]
+  }
+}
